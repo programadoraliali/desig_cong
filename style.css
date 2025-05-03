@@ -1,0 +1,268 @@
+/* Define cores baseadas no PDF como variáveis CSS */
+:root {
+  --jw-teal: #3F7280; /* Cor para links, título principal e botão Gerar */
+  --jw-teal-light: #5E8C9A; /* Tom mais claro */
+  --jw-ochre: #B58C4C; /* Cor Ocre/Amarelo Queimado (Header Membros) */
+  --jw-sienna: #A0522D; /* Cor Marrom Avermelhado/Siena (Header Designações, Botão Massa) */
+  --jw-sienna-dark: #8B4513; /* Siena mais escuro para hover */
+  --jw-secondary-grey: #6c757d; /* Cinza secundário */
+  --jw-secondary-grey-dark: #5c636a; /* Cinza mais escuro para hover */
+  --jw-success: #198754; /* Verde padrão Bootstrap */
+  --jw-info: #0dcaf0; /* Azul info padrão Bootstrap (não usado nos botões principais agora) */
+  --jw-text-light: #ffffff;
+  --jw-text-dark: #333333; /* Cor padrão texto escuro */
+  --bs-link-color-rgb: 63, 114, 128; /* Links usam a cor teal original */
+  --bs-link-hover-color-rgb: 94, 140, 154;
+}
+
+
+body {
+  background-color: #f4f7f9;
+  font-family: 'Inter', sans-serif;
+  color: var(--jw-text-dark);
+}
+
+/* Cabeçalho Principal */
+header h1 {
+    color: var(--jw-text-dark); /* Cor Texto Escuro */
+    font-weight: bold;
+}
+header h1 .bi {
+    color: var(--jw-text-dark);
+}
+header .lead {
+    color: #6c757d;
+}
+
+
+/* Cabeçalhos dos Cards - Estilo Base */
+.card-header {
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: var(--jw-text-light);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.card-header h5, .card-header .small {
+    color: var(--jw-text-light) !important;
+}
+.card-header .bi-chevron-down {
+     color: var(--jw-text-light);
+}
+
+/* Cores específicas para Headers dos Cards */
+#headerGerenciarMembros {
+    background-color: var(--jw-ochre); /* Ocre */
+}
+#headerGerarDesignacoes {
+    background-color: var(--jw-sienna); /* Siena */
+}
+
+
+/* Cabeçalhos dos Modais */
+.modal-header {
+    background-color: var(--jw-teal); /* Mantém teal nos modais */
+    color: var(--jw-text-light);
+}
+.modal-header .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+
+/* Botões Principais */
+.btn-primary { /* Gerar, Salvar Membro */
+    --bs-btn-bg: var(--jw-teal); /* Cor Teal */
+    --bs-btn-border-color: var(--jw-teal);
+    --bs-btn-hover-bg: var(--jw-teal-light);
+    --bs-btn-hover-border-color: var(--jw-teal-light);
+    --bs-btn-active-bg: var(--jw-teal-light);
+    --bs-btn-active-border-color: var(--jw-teal-light);
+    --bs-btn-disabled-bg: var(--jw-teal);
+    --bs-btn-disabled-border-color: var(--jw-teal);
+}
+
+/* Botão Adicionar em Massa (Outline Info - agora com cor Siena) */
+.btn-outline-info {
+    --bs-btn-color: var(--jw-sienna);
+    --bs-btn-border-color: var(--jw-sienna);
+    --bs-btn-hover-bg: var(--jw-sienna);
+    --bs-btn-hover-border-color: var(--jw-sienna);
+    --bs-btn-hover-color: var(--jw-text-light); /* Texto branco no hover */
+    --bs-btn-active-bg: var(--jw-sienna-dark);
+    --bs-btn-active-border-color: var(--jw-sienna-dark);
+    --bs-btn-active-color: var(--jw-text-light);
+}
+
+/* Botão Adicionar Novo (Outline Success) */
+.btn-outline-success {
+    --bs-btn-color: var(--jw-success);
+    --bs-btn-border-color: var(--jw-success);
+    --bs-btn-hover-bg: var(--jw-success);
+    --bs-btn-hover-border-color: var(--jw-success);
+    --bs-btn-hover-color: var(--jw-text-light);
+    --bs-btn-active-bg: var(--jw-success);
+    --bs-btn-active-border-color: var(--jw-success);
+    --bs-btn-active-color: var(--jw-text-light);
+}
+
+/* Botões de Outline (Exportar/Importar) */
+.btn-outline-secondary {
+    --bs-btn-color: var(--jw-teal); /* Mantém teal */
+    --bs-btn-border-color: var(--jw-teal);
+    --bs-btn-hover-bg: var(--jw-teal);
+    --bs-btn-hover-border-color: var(--jw-teal);
+    --bs-btn-hover-color: var(--jw-text-light);
+    --bs-btn-active-bg: var(--jw-teal-light);
+    --bs-btn-active-border-color: var(--jw-teal-light);
+     --bs-btn-active-color: var(--jw-text-light);
+}
+
+/* Botões de Ação na Tabela (Editar/Excluir) */
+.btn-outline-primary { /* Botão Editar */
+     --bs-btn-color: var(--jw-teal); /* Mantém teal */
+     --bs-btn-border-color: var(--jw-teal);
+     --bs-btn-hover-bg: var(--jw-teal);
+     --bs-btn-hover-border-color: var(--jw-teal);
+     --bs-btn-hover-color: var(--jw-text-light);
+}
+/* .btn-outline-danger (Excluir) - Mantém cores padrão do Bootstrap */
+
+
+/* Links */
+a, .nome-membro, .nome-substituivel {
+    color: var(--jw-teal); /* Cor teal */
+    text-decoration: none;
+}
+a:hover, .nome-membro:hover, .nome-substituivel:hover {
+    color: var(--jw-teal-light);
+    text-decoration: underline;
+}
+
+
+/* --- Permissões Grid (Modal) --- */
+.permissoes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+/* --- Badges de Permissão (Tabela Membros) --- */
+/* Mantendo as cores originais para distinção */
+.badge-indicadorQui { background-color: #198754; color: white; }
+.badge-indicadorDom { background-color: #0dcaf0; color: black; }
+.badge-volanteQui { background-color: #6610f2; color: white; }
+.badge-volanteDom { background-color: #fd7e14; color: black; }
+.badge-leitor { background-color: #ffc107; color: black; }
+.badge-presidente { background-color: #dc3545; color: white; }
+
+/* --- Estilos Tabelas --- */
+
+/* Zebra striping geral */
+.table tbody tr:nth-child(odd) { background-color: #f8f9fa; }
+.table tbody tr:nth-child(even) { background-color: #e9ecef; }
+
+/* Zebra striping específico para designações */
+.table-designacoes tbody tr:nth-child(odd) { background-color: #f8f9fa !important; }
+.table-designacoes tbody tr:nth-child(even) { background-color: #e9ecef !important; }
+
+
+/* --- Estilos Tabela de Membros --- */
+#tabelaMembros td {
+  vertical-align: middle;
+}
+#tabelaMembros td .d-flex,
+#tabelaMembros td .text-muted.fst-italic.small {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  min-height: 38px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+#tabelaMembros td.table-actions {
+    vertical-align: middle;
+}
+
+
+/* --- Estilos Tabelas de Designações --- */
+
+/* TÍTULO DAS DESIGNAÇÕES COM MOLDURA MAIS GROSSA */
+#resultadoDesignacoes h3 {
+    color: var(--jw-text-dark); /* Cor de texto padrão */
+    font-weight: 500; /* Peso de fonte médio */
+    margin-bottom: 1.5rem !important; /* Aumenta a margem inferior */
+    border: 2px solid #dee2e6; /* *** BORDA ALTERADA PARA 2px *** */
+    padding: 0.75rem 1rem; /* Adiciona preenchimento interno */
+    border-radius: 0.375rem; /* Cantos arredondados */
+    display: inline-block; /* Faz a moldura envolver apenas o texto */
+    background-color: #ffffff; /* Fundo branco para destacar */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Sombra sutil opcional */
+}
+
+/* Estilo para os títulos das tabelas individuais (Indicadores, Volantes, Outros) */
+#resultadoDesignacoes h4 {
+    color: var(--jw-text-dark); /* Cor de texto padrão */
+    font-weight: 500;
+}
+/* Ajusta a cor dos ícones nos títulos h4 */
+#resultadoDesignacoes h4 .bi {
+    color: var(--jw-secondary-grey); /* Um cinza neutro */
+}
+
+
+.table-designacoes th:not(:first-child),
+.table-designacoes td:not(:first-child) {
+  text-align: center;
+  vertical-align: middle;
+  width: auto;
+}
+.table-designacoes th:first-child {
+  text-align: center;
+  vertical-align: middle;
+  width: 90px;
+}
+.table-designacoes td.data-cell {
+    font-weight: 500;
+    width: 90px;
+    min-width: 90px;
+    padding: 0.5rem;
+    white-space: nowrap;
+    text-align: left;
+    vertical-align: middle;
+}
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* --- Badges de Dia da Semana (Tabelas Designação) --- */
+/* Mantendo cores originais para clareza */
+.table-designacoes .badge-domingo {
+  background-color: #ffebee !important;
+  color: #b71c1c !important;
+  border: 1px solid #ffcdd2;
+}
+.table-designacoes .badge-quinta {
+  background-color: #e3f2fd !important;
+  color: #0d47a1 !important;
+  border: 1px solid #bbdefb;
+}
+.table-designacoes .data-cell .badge-quinta,
+.table-designacoes .data-cell .badge-domingo {
+  min-width: 2.8em;
+  text-align: center;
+  display: inline-block;
+  margin-left: 0 !important;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  line-height: 1;
+  vertical-align: middle;
+}
+.table-designacoes .data-cell .dia-numero {
+    vertical-align: middle;
+    display: inline-block;
+    min-width: 1.5em;
+    text-align: right;
+    margin-right: 0.35em;
+    font-weight: bold;
+}
